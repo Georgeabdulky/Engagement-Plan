@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personal Engagement Plan – Fall 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --su-orange: #F76900;
+      --su-navy: #000E54;
+      --bg: #f6f7fb;
+      --card-bg: #ffffff;
+      --accent: var(--su-orange);
+      --accent-soft: #ffe5cc;
+      --text-main: #0b1020;
+      --text-muted: #4b5563;
+      --border-soft: #e2e8f0;
+      --radius-lg: 16px;
+      --radius-md: 10px;
+      --shadow-soft: 0 12px 30px rgba(0, 14, 84, 0.12);
+    }
+    body {
+      background: radial-gradient(circle at top, #e1e7ff 0, #f6f7fb 40%, #f6f7fb 100%);
+      font-family: system-ui, sans-serif;
+      margin: 0; padding: 24px;
+      color: var(--text-main);
+    }
+    header {
+      background: linear-gradient(135deg, var(--su-navy), #172656);
+      color: white;
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      margin-bottom: 24px;
+    }
+    h1 { margin: 0; }
+    .container { max-width: 1000px; margin: auto; }
+    .goal {
+      background: var(--card-bg);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow-soft);
+      cursor: pointer;
+    }
+    .goal-content {
+      display: none;
+      margin-top: 10px;
+      color: var(--text-muted);
+    }
+    .goal.active .goal-content { display: block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Personal Engagement Plan</h1>
+      <p>Fall 2025 • Syracuse University</p>
+    </header>
+
+    <div class="goal">
+      <h3>Self Goal – Wellness Routine</h3>
+      <div class="goal-content">
+        <p><strong>SMART Goal:</strong> Work out 4x per week at the Barnes Center.</p>
+        <p><strong>Actions:</strong> Schedule workouts, track progress.</p>
+        <p><strong>Growth:</strong> Wellness (W)</p>
+      </div>
+    </div>
+
+    <div class="goal">
+      <h3>Campus Goal – Academic Support</h3>
+      <div class="goal-content">
+        <p><strong>SMART Goal:</strong> Attend office hours twice per month.</p>
+        <p><strong>Actions:</strong> Use tutoring and office hours.</p>
+        <p><strong>Growth:</strong> Academic (A)</p>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('.goal').forEach(goal => {
+        goal.addEventListener('click', () => {
+          goal.classList.toggle('active');
+        });
+      });
+    </script>
+  </div>
+</body>
+</html>
